@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.console-line {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.console-text {
+  display: inline-block;
+  white-space: pre;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.neon-glow {
+  box-shadow:
+    0 0 6px #00ff99,
+    0 0 12px #00ff99,
+    0 0 20px #00ff99;
+  text-shadow:
+    0 0 2px #00ff99,
+    0 0 6px #00ff99,
+    0 0 12px #00ff99;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 0, 0.05),
+    rgba(0, 255, 0, 0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
