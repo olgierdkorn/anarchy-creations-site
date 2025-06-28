@@ -39,12 +39,12 @@ function typeWriterEffect(element, text, speed = 25) {
 }
 function updateHeader(index) {
   const status = document.getElementById("consoleText");
-  const sectionNames = [
-    "Bootloader",
-    "Black Project [SHOWTIME]",
-    "Operator Profile",
-    "Uplink Comm",
-  ];
+const sectionNames = [
+  "./boot/system-breakdown.exe",
+  "./top_secret/showtime.tba",
+  "./dev/operator.profile",
+  "./net/comms.cfg"
+];
   if (status) {
     typeWriterEffect(status, `> Initializing ${sectionNames[index]}`);
   }
@@ -79,4 +79,14 @@ window.addEventListener("keydown", (e) => {
   if (isScrolling) return;
   if (e.key === "ArrowDown") goToSection(current + 1);
   if (e.key === "ArrowUp") goToSection(current - 1);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateHeader(0);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  window.scrollTo(0, 0);
+  updateHeader(0);
 });
