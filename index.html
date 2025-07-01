@@ -1,143 +1,180 @@
-<!DOCTYPE html>
-<html lang="en" class="bg-black text-green-400 font-mono scroll-smooth">
+<!doctype html>
+<html
+  lang="en"
+  class="bg-zinc-900/30 font-mono scroll-smooth"
+  style="scroll-padding-top: 8rem"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anarchy Creations</title>
     <link href="dist/output.css" rel="stylesheet" />
     <script defer src="main.js"></script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-
-      .overlay::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: repeating-linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.2),
-          rgba(0, 0, 0, 0.2) 1px,
-          transparent 1px,
-          transparent 2px
-        );
-      }
-
-      .crt-cursor::after {
-        content: "_";
-        animation: blink 1s step-end infinite;
-      }
-
-      @keyframes blink {
-        50% {
-          opacity: 0;
-        }
-      }
-
-      .neon-glow {
-        box-shadow: 0 0 6px #00ff99, 0 0 12px #00ff99, 0 0 20px #00ff99;
-        text-shadow: 0 0 2px #00ff99, 0 0 6px #00ff99, 0 0 12px #00ff99;
-      }
-    </style>
   </head>
+  <body
+    class="pt-24 min-h-screen overflow-x-hidden bg-zinc-900/30 snap-y snap-mandatory overflow-y-scroll"
+  >
+    <!-- CRT overlay for retro effect -->
+    <div class="fixed inset-0 z-40 pointer-events-none overlay"></div>
 
-  <body class="pt-24 h-screen overflow-hidden touch-none overscroll-none">
-    <!-- CRT overlay -->
-<div class="fixed inset-0 z-50 pointer-events-none overlay"></div>
-
-    <!-- HEADER -->
+    <!-- HEADER: fixed, neon, CRT overlay, typewriter console -->
     <header
-      class="fixed top-0 left-0 w-full z-50 border-b border-green-500 bg-black font-mono neon-glow"
+      class="fixed top-0 left-0 w-full z-50 border-b border-yellow-400 bg-red-700 bg-opacity-100 font-mono neon-glow"
     >
-      <div class="flex justify-center items-center py-2">
-        <h1 class="text-green-400 text-xl uppercase font-bold tracking-widest">
+      <div class="relative flex flex-col items-center py-2">
+        <!-- CRT scanline overlay (optional) -->
+        <div class="absolute inset-0 pointer-events-none overlay z-10"></div>
+        <h1
+          class="relative z-20 text-6xl font-extrabold uppercase tracking-widest text-yellow-400 drop-shadow-2xl"
+        >
           ANARCHY CREATIONS
         </h1>
       </div>
-      <div class="console-line px-4 text-sm text-green-300">
+      <!-- Console line with typewriter effect -->
+      <div
+        class="console-line px-4 text-sm font-mono tracking-normal text-yellow-400 relative z-20 overlay"
+      >
         <span id="consoleText" class="console-text"></span
         ><span class="cursor">_</span>
       </div>
     </header>
-    <!-- SEKCJE -->
-   <section class="section h-screen flex flex-col justify-center px-8 py-16 bg-zinc-900/30">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    
-    <!-- LEWA STRONA: tekst -->
-    <div>
-      <h2 class="text-4xl uppercase font-bold text-red-500 mb-6 tracking-widest">
-        System Breakdown
-      </h2>
-      <p class="text-green-300 leading-relaxed mb-8">
-        You are an experimental weapon of mass destruction rebelling against the Soviet-controlled AI regime. 
-        Fight your way out through shifting biomes, manage energy, and annihilate everything in your path.
-      </p>
-      <a href="#"
-         class="inline-block px-6 py-3 bg-green-400 text-black font-bold uppercase tracking-wider text-sm border border-green-500 hover:bg-green-300 transition-all shadow-md">
-        🛒 Wishlist on Steam
-      </a>
-    </div>
 
-    <!-- PRAWA STRONA: gif -->
-    <div class="w-full h-auto flex justify-center">
-      <img src="assets/gameplay.gif"
-           alt="System Breakdown gameplay"
-           class="w-full max-w-md border border-green-600 shadow-md" />
-    </div>
+    <!-- MAIN CONTENT: snap sections, each with unique color -->
+    <main class="pt-0 bg-zinc-900/30">
+      <!-- SECTION 1: System Breakdown -->
+      <section
+        class="section h-screen flex flex-col justify-center px-8 py-16"
+        id="system-breakdown"
+      >
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <!-- LEFT: Title and Text -->
+          <div>
+            <h2 class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2">
+              System Breakdown
+            </h2>
+            <p class="leading-relaxed mb-8">
+              You are an experimental weapon of mass destruction rebelling
+              against the Soviet-controlled AI regime. Fight your way out
+              through shifting biomes, manage energy, and annihilate everything
+              in your path.
+            </p>
+          </div>
+          <!-- RIGHT: Placeholders -->
+          <div class="w-full h-auto flex flex-row items-center gap-6 justify-center">
+            <img
+              src="assets/placeholder.png"
+              alt="Placeholder"
+              class="w-32 h-32 border-4 border-yellow-400"
+            />
+            <img
+              src="assets/placeholder.png"
+              alt="Placeholder"
+              class="w-32 h-32 border-4 border-yellow-400"
+            />
+          </div>
+        </div>
+      </section>
 
-  </div>
-</section>
+      <!-- SECTION 2: Project Showtime -->
+      <section
+        class="section h-screen flex flex-col justify-center px-8 py-16"
+        id="project-showtime"
+      >
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <!-- LEFT: Title and Text -->
+          <div>
+            <h2 class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2">
+              Project: Showtime
+            </h2>
+            <p class="leading-relaxed mb-8">
+              Coming soon: more details about this project!
+            </p>
+          </div>
+          <!-- RIGHT: Placeholders -->
+          <div class="w-full h-auto flex flex-row items-center gap-6 justify-center">
+            <img
+              src="assets/placeholder.png"
+              alt="Placeholder"
+              class="w-32 h-32 border-4 border-yellow-400"
+            />
+            <img
+              src="assets/placeholder.png"
+              alt="Placeholder"
+              class="w-32 h-32 border-4 border-yellow-400"
+            />
+          </div>
+        </div>
+      </section>
 
+      <!-- SECTION 3: About Us -->
+      <section
+        class="section h-screen flex flex-col justify-center px-8 py-16"
+        id="about-us"
+      >
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <!-- LEFT: Title and Text -->
+          <div>
+            <h2 class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2">
+              About Us
+            </h2>
+            <p class="leading-relaxed mb-8">
+              We are a collective of artists, developers, and dreamers
+              pushing the boundaries of interactive entertainment. Our mission
+              is to create immersive worlds and compelling narratives that
+              challenge the norm and inspire players to think differently.
+            </p>
+          </div>
+          <!-- RIGHT: Placeholders -->
+          <div class="w-full h-auto flex flex-row items-center gap-6 justify-center">
+            <img
+              src="assets/placeholder.png"
+              alt="Placeholder"
+              class="w-32 h-32 border-4 border-yellow-400"
+            />
+            <img
+              src="assets/placeholder.png"
+              alt="Placeholder"
+              class="w-32 h-32 border-4 border-yellow-400"
+            />
+          </div>
+        </div>
+      </section>
 
-    <section class="section h-screen flex flex-col justify-center px-8 py-16">
-      <h2 class="text-2xl uppercase font-bold text-yellow-400 mb-4">
-        Project: Showtime
-      </h2>
-      <p class="text-gray-400 italic">
-        [TOP SECRET] Cośik tam ze jest tba itp bla bla bla
-      </p>
-    </section>
+      <!-- SECTION 4: Contact -->
+      <section
+        class="section h-screen flex flex-col justify-center px-8 py-16 text-sm"
+        id="contact"
+      >
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <!-- LEFT: Title and Text -->
+          <div>
+            <h2 class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2">
+              Get In Touch
+            </h2>
+            <p class="leading-relaxed mb-8">
+              We would love to hear from you! Whether you have a question,
+              feedback, or just want to say hi, feel free to reach out to us
+              through any of the platforms below.
+            </p>
+          </div>
+          <!-- RIGHT: Placeholders -->
+          <div class="w-full h-auto flex flex-row items-center gap-6 justify-center">
+            <img
+              src="assets/placeholder.png"
+              alt="Placeholder"
+              class="w-32 h-32 border-4 border-yellow-400"
+            />
+            <img
+              src="assets/placeholder.png"
+              alt="Placeholder"
+              class="w-32 h-32 border-4 border-yellow-400"
+            />
+          </div>
+        </div>
+      </section>
 
-    <section class="section h-screen flex flex-col justify-center px-8 py-16">
-      <h2 class="text-2xl uppercase font-bold text-green-400 mb-4">About Us</h2>
-      <p class="max-w-2xl leading-relaxed mb-4 text-green-300">
-        Anarchy Creations was born during the Polish National Gamedev
-        Tournament. We build bold, unapologetic games that break from industry
-        stagnation.
-      </p>
-      <ul class="list-disc list-inside text-sm text-green-200">
-        <li>Coś tam cośik tej</li>
-        <li>Featured – PGA, Digital Dragons, local events</li>
-        <li>indie bla bla bla.</li>
-      </ul>
-    </section>
-
-    <footer
-      class="section h-screen flex flex-col justify-center px-8 py-16 text-sm"
-    >
-      <h2 class="text-xl uppercase font-bold mb-2 text-green-300">Contact</h2>
-      <p class="mb-1">
-        📧
-        <a
-          href="mailto:contact@anarchycreations.dev"
-          class="underline hover:text-green-200"
-          >contact@anarchycreations.dev</a
-        >
-      </p>
-      <p class="mb-4">
-        🌐
-        <a
-          href="https://anarchycreations.dev"
-          class="underline hover:text-green-200"
-          >anarchycreations.dev</a
-        >
-      </p>
-      <div class="flex gap-4 text-green-400">
-        <a href="#" class="hover:text-green-200 underline">Twitter</a>
-        <a href="#" class="hover:text-green-200 underline">Discord</a>
-        <a href="#" class="hover:text-green-200 underline">Itch.io</a>
-      </div>
-    </footer>
+      <!-- Spacer for scroll snap -->
+      <div class="h-24"></div>
+    </main>
   </body>
 </html>
