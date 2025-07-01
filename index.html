@@ -11,15 +11,14 @@
     <link href="dist/output.css" rel="stylesheet" />
     <script defer src="main.js"></script>
   </head>
-  <body
-    class="pt-24 min-h-screen overflow-x-hidden bg-zinc-900/30 snap-y snap-mandatory overflow-y-scroll"
-  >
+  <body class="min-h-screen overflow-x-hidden bg-zinc-900/30">
     <!-- CRT overlay for retro effect -->
     <div class="fixed inset-0 z-40 pointer-events-none overlay"></div>
 
     <!-- HEADER: fixed, neon, CRT overlay, typewriter console -->
     <header
       class="fixed top-0 left-0 w-full z-50 border-b border-yellow-400 bg-red-700 bg-opacity-100 font-mono neon-glow"
+      style="height: 6rem; min-height: 4rem"
     >
       <div class="relative flex flex-col items-center py-2">
         <!-- CRT scanline overlay (optional) -->
@@ -32,7 +31,7 @@
       </div>
       <!-- Console line with typewriter effect -->
       <div
-        class="console-line px-4 text-sm font-mono tracking-normal text-yellow-400 relative z-20 overlay"
+      class="console-line px-4 text-sm font-mono tracking-normal text-yellow-400 relative z-20 overlay"
       >
         <span id="consoleText" class="console-text"></span
         ><span class="cursor">_</span>
@@ -40,16 +39,22 @@
     </header>
 
     <!-- MAIN CONTENT: snap sections, each with unique color -->
-    <main class="pt-0 bg-zinc-900/30">
+    <main
+      class="pt-24 bg-zinc-900/30 snap-y snap-mandatory overflow-y-scroll h-screen"
+    >
       <!-- SECTION 1: System Breakdown -->
       <section
-        class="section h-screen flex flex-col justify-center px-8 py-16"
+        class="section h-screen flex flex-col justify-center px-8 py-16 snap-start"
         id="system-breakdown"
       >
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+        >
           <!-- LEFT: Title and Text -->
           <div>
-            <h2 class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2">
+            <h2
+              class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2"
+            >
               System Breakdown
             </h2>
             <p class="leading-relaxed mb-8">
@@ -60,7 +65,9 @@
             </p>
           </div>
           <!-- RIGHT: Placeholders -->
-          <div class="w-full h-auto flex flex-row items-center gap-6 justify-center">
+          <div
+            class="w-full h-auto flex flex-row items-center gap-6 justify-center"
+          >
             <img
               src="assets/placeholder.png"
               alt="Placeholder"
@@ -77,21 +84,38 @@
 
       <!-- SECTION 2: Project Showtime -->
       <section
-        class="section h-screen flex flex-col justify-center px-8 py-16"
+        class="section h-screen flex flex-col justify-center px-8 py-16 snap-start"
         id="project-showtime"
       >
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+        >
           <!-- LEFT: Title and Text -->
           <div>
-            <h2 class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2">
+            <h2
+              class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2"
+            >
               Project: Showtime
             </h2>
             <p class="leading-relaxed mb-8">
-              Coming soon: more details about this project!
+              Enter the arena of digital revolution. Project Showtime is a
+              showcase of raw power, neon chaos, and relentless action.
+              <br /><br />
+              In this world, every move is a performance and every battle is a
+              spectacle. Expect shifting rules, unpredictable enemies, and a
+              system that rewards both skill and style.
+              <br /><br />
+              Harness experimental weaponry, manipulate the environment, and
+              outsmart the regime’s AI in a fight for freedom and fame.
+              <br /><br />
+              Stay tuned for more details as the uprising unfolds. Showtime is
+              coming soon.
             </p>
           </div>
           <!-- RIGHT: Placeholders -->
-          <div class="w-full h-auto flex flex-row items-center gap-6 justify-center">
+          <div
+            class="w-full h-auto flex flex-row items-center gap-6 justify-center"
+          >
             <img
               src="assets/placeholder.png"
               alt="Placeholder"
@@ -108,24 +132,30 @@
 
       <!-- SECTION 3: About Us -->
       <section
-        class="section h-screen flex flex-col justify-center px-8 py-16"
+        class="section h-screen flex flex-col justify-center px-8 py-16 snap-start"
         id="about-us"
       >
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+        >
           <!-- LEFT: Title and Text -->
           <div>
-            <h2 class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2">
+            <h2
+              class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2"
+            >
               About Us
             </h2>
             <p class="leading-relaxed mb-8">
-              We are a collective of artists, developers, and dreamers
-              pushing the boundaries of interactive entertainment. Our mission
-              is to create immersive worlds and compelling narratives that
-              challenge the norm and inspire players to think differently.
+              We are a collective of artists, developers, and dreamers pushing
+              the boundaries of interactive entertainment. Our mission is to
+              create immersive worlds and compelling narratives that challenge
+              the norm and inspire players to think differently.
             </p>
           </div>
           <!-- RIGHT: Placeholders -->
-          <div class="w-full h-auto flex flex-row items-center gap-6 justify-center">
+          <div
+            class="w-full h-auto flex flex-row items-center gap-6 justify-center"
+          >
             <img
               src="assets/placeholder.png"
               alt="Placeholder"
@@ -142,13 +172,17 @@
 
       <!-- SECTION 4: Contact -->
       <section
-        class="section h-screen flex flex-col justify-center px-8 py-16 text-sm"
+        class="section h-screen flex flex-col justify-center px-8 py-16 text-sm snap-start"
         id="contact"
       >
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+        >
           <!-- LEFT: Title and Text -->
           <div>
-            <h2 class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2">
+            <h2
+              class="section-title text-4xl uppercase font-bold mb-6 tracking-widest border-b-2 pb-2"
+            >
               Get In Touch
             </h2>
             <p class="leading-relaxed mb-8">
@@ -158,7 +192,9 @@
             </p>
           </div>
           <!-- RIGHT: Placeholders -->
-          <div class="w-full h-auto flex flex-row items-center gap-6 justify-center">
+          <div
+            class="w-full h-auto flex flex-row items-center gap-6 justify-center"
+          >
             <img
               src="assets/placeholder.png"
               alt="Placeholder"

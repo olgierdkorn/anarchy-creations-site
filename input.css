@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+header, header h1, header .console-line, header .cursor {
+  text-shadow:
+    0 0 4px #fde047,
+    0 0 12px #fde047,
+    0 0 24px #fde047;
+}
+
 .console-line {
   white-space: nowrap;
   overflow: hidden;
@@ -22,18 +29,9 @@
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
-}
-
-.neon-glow {
-  box-shadow:
-    0 0 6px #00ff99,
-    0 0 12px #00ff99,
-    0 0 20px #00ff99;
-  text-shadow:
-    0 0 2px #00ff99,
-    0 0 6px #00ff99,
-    0 0 12px #00ff99;
+  50% {
+    opacity: 0;
+  }
 }
 
 .overlay::before {
@@ -48,4 +46,53 @@
     transparent 2px
   );
   pointer-events: none;
+}
+
+/* SEKCJE: unikalne kolory tła i tekstu */
+#system-breakdown {
+  background: linear-gradient(135deg, #1a1a1a 80%, #2e2e2e 100%);
+  color: #eaff00;
+}
+#system-breakdown .section-title {
+  color: #eaff00;
+  text-shadow:
+    0 0 4px #eaff00,
+    0 0 12px #eaff00,
+    0 0 24px #eaff00;
+}
+
+#project-showtime {
+  background: linear-gradient(135deg, #2a0000 80%, #4d1a1a 100%);
+  color: #ff4e4e;
+}
+#project-showtime .section-title {
+  color: #ff4e4e;
+  text-shadow:
+    0 0 4px #ff4e4e,
+    0 0 12px #ff4e4e,
+    0 0 24px #ff4e4e;
+}
+
+#about-us {
+  background: linear-gradient(135deg, #001a1a 80%, #1a4d4d 100%);
+  color: #00ffe7;
+}
+#about-us .section-title {
+  color: #00ffe7;
+  text-shadow:
+    0 0 4px #00ffe7,
+    0 0 12px #00ffe7,
+    0 0 24px #00ffe7;
+}
+
+#contact {
+  background: linear-gradient(135deg, #1a001a 80%, #4d1a4d 100%);
+  color: #ffb3ff;
+}
+#contact .section-title {
+  color: #ffb3ff;
+  text-shadow:
+    0 0 4px #ffb3ff,
+    0 0 12px #ffb3ff,
+    0 0 24px #ffb3ff;
 }

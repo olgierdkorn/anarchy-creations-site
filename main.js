@@ -25,7 +25,7 @@ function typeWriterEffect(element, text, speed = 25) {
     typewriterInterval = null;
   }
 
-  element.textContent = ''; // wyczyść pole przed startem
+  element.textContent = ""; // wyczyść pole przed startem
   let i = 0;
 
   typewriterInterval = setInterval(() => {
@@ -39,12 +39,12 @@ function typeWriterEffect(element, text, speed = 25) {
 }
 function updateHeader(index) {
   const status = document.getElementById("consoleText");
-const sectionNames = [
-  "./boot/system-breakdown.exe",
-  "./top_secret/showtime.tba",
-  "./dev/operator.profile",
-  "./net/comms.cfg"
-];
+  const sectionNames = [
+    "./boot/system-breakdown.exe",
+    "./top_secret/showtime.tba",
+    "./dev/operator.profile",
+    "./net/comms.cfg",
+  ];
   if (status) {
     typeWriterEffect(status, `> Initializing ${sectionNames[index]}`);
   }
@@ -72,7 +72,7 @@ window.addEventListener(
       else if (e.deltaY < 0) goToSection(current - 1);
     }, 100);
   },
-  { passive: false }
+  { passive: false },
 );
 
 window.addEventListener("keydown", (e) => {
@@ -82,11 +82,7 @@ window.addEventListener("keydown", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  updateHeader(0);
-});
+  goToSection(0);
 
-document.addEventListener("DOMContentLoaded", () => {
-
-  window.scrollTo(0, 0);
   updateHeader(0);
 });
