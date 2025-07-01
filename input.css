@@ -9,25 +9,6 @@ header, header h1, header .console-line, header .cursor {
     0 0 24px #fde047;
 }
 
-.console-line {
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  text-align: left;
-  position: relative;
-}
-
-.console-text {
-  display: inline-block;
-  white-space: pre;
-}
-
-.cursor {
-  display: inline-block;
-  margin-left: 2px;
-  animation: blink 1s step-end infinite;
-}
-
 @keyframes blink {
   50% {
     opacity: 0;
@@ -48,12 +29,11 @@ header, header h1, header .console-line, header .cursor {
   pointer-events: none;
 }
 
-/* SEKCJE: unikalne kolory tła i tekstu */
-#system-breakdown, [data-style-id="system-breakdown"] {
+.section[data-section-type="system-breakdown"] {
   background: linear-gradient(135deg, #1a1a1a 80%, #2e2e2e 100%);
   color: #eaff00;
 }
-#system-breakdown .section-title, [data-style-id="system-breakdown"] .section-title {
+.section[data-section-type="system-breakdown"] .section-title {
   color: #eaff00;
   text-shadow:
     0 0 4px #eaff00,
@@ -61,11 +41,11 @@ header, header h1, header .console-line, header .cursor {
     0 0 24px #eaff00;
 }
 
-#project-showtime {
+.section[data-section-type="project-showtime"] {
   background: linear-gradient(135deg, #2a0000 80%, #4d1a1a 100%);
   color: #ff4e4e;
 }
-#project-showtime .section-title {
+.section[data-section-type="project-showtime"] .section-title {
   color: #ff4e4e;
   text-shadow:
     0 0 4px #ff4e4e,
@@ -73,11 +53,11 @@ header, header h1, header .console-line, header .cursor {
     0 0 24px #ff4e4e;
 }
 
-#about-us {
+.section[data-section-type="about-us"] {
   background: linear-gradient(135deg, #001a1a 80%, #1a4d4d 100%);
   color: #00ffe7;
 }
-#about-us .section-title {
+.section[data-section-type="about-us"] .section-title {
   color: #00ffe7;
   text-shadow:
     0 0 4px #00ffe7,
@@ -85,11 +65,11 @@ header, header h1, header .console-line, header .cursor {
     0 0 24px #00ffe7;
 }
 
-#contact, [data-style-id="contact"] {
+.section[data-section-type="contact"] {
   background: linear-gradient(135deg, #1a001a 80%, #4d1a4d 100%);
   color: #ffb3ff;
 }
-#contact .section-title, [data-style-id="contact"] .section-title {
+.section[data-section-type="contact"] .section-title {
   color: #ffb3ff;
   text-shadow:
     0 0 4px #ffb3ff,
