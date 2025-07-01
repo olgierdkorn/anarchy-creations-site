@@ -49,11 +49,11 @@ header, header h1, header .console-line, header .cursor {
 }
 
 /* SEKCJE: unikalne kolory tła i tekstu */
-#system-breakdown {
+#system-breakdown, [data-style-id="system-breakdown"] {
   background: linear-gradient(135deg, #1a1a1a 80%, #2e2e2e 100%);
   color: #eaff00;
 }
-#system-breakdown .section-title {
+#system-breakdown .section-title, [data-style-id="system-breakdown"] .section-title {
   color: #eaff00;
   text-shadow:
     0 0 4px #eaff00,
@@ -85,14 +85,22 @@ header, header h1, header .console-line, header .cursor {
     0 0 24px #00ffe7;
 }
 
-#contact {
+#contact, [data-style-id="contact"] {
   background: linear-gradient(135deg, #1a001a 80%, #4d1a4d 100%);
   color: #ffb3ff;
 }
-#contact .section-title {
+#contact .section-title, [data-style-id="contact"] .section-title {
   color: #ffb3ff;
   text-shadow:
     0 0 4px #ffb3ff,
     0 0 12px #ffb3ff,
     0 0 24px #ffb3ff;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+main {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
 }
